@@ -14,7 +14,7 @@ import java.nio.charset.StandardCharsets;
 public class mongo {
     public static void main(String[] args) throws IOException {
 
-        com.mongodb.client.MongoClient client = MongoClients.create( "mongodb+srv://<USERNAME>:<PASSWORD>@sandbox.jadwj.mongodb.net/<DATABASE>?retryWrites=true&w=majority");
+        com.mongodb.client.MongoClient client = MongoClients.create( "mongodb+srv://<USERNAME>:<PASSWORD>@<CLUSTER NAME>/<DATABASE>?retryWrites=true&w=majority");
 
         MongoDatabase database = client.getDatabase("<DATABASE>");
         MongoCollection<Document> coll = database.getCollection("<COLLECTION>");
